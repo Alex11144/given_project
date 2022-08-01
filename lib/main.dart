@@ -1,8 +1,11 @@
 // import 'dart:html';
-import 'dart:ui';
+// import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_from_amirali/mehsullar.dart';
+import 'package:project_from_amirali/BottomAppBar.dart';
+import 'package:project_from_amirali/bottomAppBarIcons.dart';
+import 'package:project_from_amirali/hicabs.dart';
+import 'package:project_from_amirali/sections.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 void main() {
@@ -24,8 +27,7 @@ class _ShopState extends State<Shop> {
     return Scaffold(
       body: Column(children: [
         Container(
-          // width: 1000,
-          padding: const EdgeInsets.fromLTRB(450, 30, 0, 0),
+          padding: const EdgeInsets.fromLTRB(420, 30, 0, 0),
           child: Stack(
             children: [
               Container(
@@ -33,7 +35,7 @@ class _ShopState extends State<Shop> {
                 height: 300,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: Colors.red),
+                    color: Color(0xFFE31E24)),
                 child: Padding(
                   padding: const EdgeInsets.all(15),
                   child: Column(
@@ -157,70 +159,107 @@ class _ShopState extends State<Shop> {
                   children: [
                     Mehsullar(
                       text: "Hicab",
-                      image: 'assets/images/muslim 1.png',
+                      image: 'assets/images/hicab.png',
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                                transitionDuration: Duration(milliseconds: 500),
+                                transitionsBuilder:
+                                    (context, animation, animationTime, child) {
+                                  animation = CurvedAnimation(
+                                      parent: animation, curve: Curves.easeOut);
+                                  return ScaleTransition(
+                                    alignment: Alignment.center,
+                                    scale: animation,
+                                    child: child,
+                                  );
+                                },
+                                pageBuilder:
+                                    (context, animation, animationTime) {
+                                  return Hicabs();
+                                }));
+                      },
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
                       text: ("Etirler"),
-                      image: 'assets/images/perfume 1.png',
+                      image: 'assets/images/hicab.png',
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
                         text: ("Dini Kitablar"),
-                        image: 'assets/images/koran 1.png'),
+                        image: 'assets/images/hicab.png'),
                     SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
-                        text: ("Diger"),
-                        image: "assets/images/CirclesFour.png"),
+                        text: ("Diger"), image: "assets/images/hicab.png"),
                   ],
                 ),
               ),
-              // Row(
-              //   children: [
-              //     Mehsullar(text: ("Quran")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Namaz")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Hacc")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Ehkem")),
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              // Row(
-              //   children: [
-              //     Mehsullar(text: ("Mefatih")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Qible")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Teqvim")),
-              //     SizedBox(
-              //       width: 20,
-              //     ),
-              //     Mehsullar(text: ("Huseyniyye")),
-              //   ],
-              // )
+              Row(
+                children: [
+                  Mehsullar(
+                    text: "Hicab",
+                    image: 'assets/images/hicab.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(
+                    text: ("Etirler"),
+                    image: 'assets/images/hicab.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(
+                      text: ("Dini Kitablar"),
+                      image: 'assets/images/hicab.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Mehsullar(
+                    text: "Hicab",
+                    image: 'assets/images/hicab.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(
+                    text: ("Etirler"),
+                    image: 'assets/images/hicab.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(
+                      text: ("Dini Kitablar"),
+                      image: 'assets/images/hicab.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+                ],
+              ),
             ],
           ),
         ),
+        SizedBox(height: 14.8),
+        appBar()
       ]),
     );
   }
