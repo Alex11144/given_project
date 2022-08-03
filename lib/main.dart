@@ -1,18 +1,15 @@
 // import 'dart:html';
 // import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/cupertino/tab_scaffold.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_from_amirali/BottomAppBar.dart';
+import 'package:project_from_amirali/BottomNavigationBar.dart';
 import 'package:project_from_amirali/bottomAppBarIcons.dart';
 import 'package:project_from_amirali/hicabs.dart';
 import 'package:project_from_amirali/sections.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
-void main() {
-  runApp(const MaterialApp(
-    home: Shop(),
-  ));
-}
 
 class Shop extends StatefulWidget {
   const Shop({Key? key}) : super(key: key);
@@ -161,24 +158,23 @@ class _ShopState extends State<Shop> {
                       text: "Hicab",
                       image: 'assets/images/hicab.png',
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                                transitionDuration: Duration(milliseconds: 500),
-                                transitionsBuilder:
-                                    (context, animation, animationTime, child) {
-                                  animation = CurvedAnimation(
-                                      parent: animation, curve: Curves.easeOut);
-                                  return ScaleTransition(
-                                    alignment: Alignment.center,
-                                    scale: animation,
-                                    child: child,
-                                  );
-                                },
-                                pageBuilder:
-                                    (context, animation, animationTime) {
-                                  return Hicabs();
-                                }));
+                        setState(() {
+                          Navigator.of(context).push(PageRouteBuilder(
+                              transitionDuration: Duration(milliseconds: 500),
+                              transitionsBuilder:
+                                  (context, animation, animationTime, child) {
+                                animation = CurvedAnimation(
+                                    parent: animation, curve: Curves.easeOut);
+                                return ScaleTransition(
+                                  alignment: Alignment.center,
+                                  scale: animation,
+                                  child: child,
+                                );
+                              },
+                              pageBuilder: (context, animation, animationTime) {
+                                return Hicabs();
+                              }));
+                        });
                       },
                     ),
                     SizedBox(
@@ -259,8 +255,8 @@ class _ShopState extends State<Shop> {
           ),
         ),
         SizedBox(height: 14.8),
-        appBar()
       ]),
+      // bottomNavigationBar: BottomNavBar(),
     );
   }
 }
