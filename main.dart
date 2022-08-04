@@ -1,14 +1,18 @@
 // import 'dart:html';
+// import 'dart:html';
 // import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/cupertino/tab_scaffold.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_from_amirali/BottomAppBar.dart';
-import 'package:project_from_amirali/BottomNavigationBar.dart';
-import 'package:project_from_amirali/bottomAppBarIcons.dart';
+import 'package:project_from_amirali/BottomNavBar.dart';
+
 import 'package:project_from_amirali/hicabs.dart';
 import 'package:project_from_amirali/sections.dart';
 
+void main() {
+  runApp(
+    const MaterialApp(home: Shop()),
+  );
+}
 // import 'package:google_fonts/google_fonts.dart';
 
 class Shop extends StatefulWidget {
@@ -156,7 +160,7 @@ class _ShopState extends State<Shop> {
                   children: [
                     Mehsullar(
                       text: "Hicab",
-                      image: 'assets/images/hicab.png',
+                      image: 'assets/images/CirclesFour.png',
                       onTap: () {
                         setState(() {
                           Navigator.of(context).push(PageRouteBuilder(
@@ -182,19 +186,20 @@ class _ShopState extends State<Shop> {
                     ),
                     Mehsullar(
                       text: ("Etirler"),
-                      image: 'assets/images/hicab.png',
+                      image: 'assets/images/CirclesFour.png',
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
                         text: ("Dini Kitablar"),
-                        image: 'assets/images/hicab.png'),
+                        image: 'assets/images/CirclesFour.png'),
                     SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
-                        text: ("Diger"), image: "assets/images/hicab.png"),
+                        text: ("Diger"),
+                        image: "assets/images/CirclesFour.png"),
                   ],
                 ),
               ),
@@ -202,25 +207,26 @@ class _ShopState extends State<Shop> {
                 children: [
                   Mehsullar(
                     text: "Hicab",
-                    image: 'assets/images/hicab.png',
+                    image: 'assets/images/CirclesFour.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                     text: ("Etirler"),
-                    image: 'assets/images/hicab.png',
+                    image: 'assets/images/CirclesFour.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                       text: ("Dini Kitablar"),
-                      image: 'assets/images/hicab.png'),
+                      image: 'assets/images/CirclesFour.png'),
                   SizedBox(
                     width: 20,
                   ),
-                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+                  Mehsullar(
+                      text: ("Diger"), image: "assets/images/CirclesFour.png"),
                 ],
               ),
               const SizedBox(
@@ -230,25 +236,26 @@ class _ShopState extends State<Shop> {
                 children: [
                   Mehsullar(
                     text: "Hicab",
-                    image: 'assets/images/hicab.png',
+                    image: 'assets/images/CirclesFour.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                     text: ("Etirler"),
-                    image: 'assets/images/hicab.png',
+                    image: 'assets/images/CirclesFour.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                       text: ("Dini Kitablar"),
-                      image: 'assets/images/hicab.png'),
+                      image: 'assets/images/CirclesFour.png'),
                   SizedBox(
                     width: 20,
                   ),
-                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+                  Mehsullar(
+                      text: ("Diger"), image: "assets/images/CirclesFour.png"),
                 ],
               ),
             ],
@@ -256,7 +263,7 @@ class _ShopState extends State<Shop> {
         ),
         SizedBox(height: 14.8),
       ]),
-      // bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

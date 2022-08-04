@@ -5,14 +5,14 @@ import 'package:project_from_amirali/BottomNavBar.dart';
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 
-class Hicabs extends StatefulWidget {
-  const Hicabs({Key? key}) : super(key: key);
+class Bar extends StatefulWidget {
+  const Bar({Key? key}) : super(key: key);
 
   @override
-  State<Hicabs> createState() => _HicabsState();
+  State<Bar> createState() => _BarState();
 }
 
-class _HicabsState extends State<Hicabs> {
+class _BarState extends State<Bar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,73 +31,62 @@ class _HicabsState extends State<Hicabs> {
             children: [
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
+                  Image.asset("assets/images/Parfum.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
                 child: Column(children: [
-                  Image.asset("assets/images/muslim 1.png"),
                   Text("Ag hicab"),
                 ]),
               ),
