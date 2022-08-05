@@ -1,17 +1,20 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
 import 'package:project_from_amirali/main.dart';
+
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 
-class Hicabs extends StatefulWidget {
-  const Hicabs({Key? key}) : super(key: key);
+class Etir extends StatefulWidget {
+  const Etir({Key? key}) : super(key: key);
 
   @override
-  State<Hicabs> createState() => _HicabsState();
+  State<Etir> createState() => _EtirState();
 }
 
-class _HicabsState extends State<Hicabs> {
+class _EtirState extends State<Etir> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +32,7 @@ class _HicabsState extends State<Hicabs> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Hicablar",
+                      "Etirler",
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
                     ),
@@ -48,73 +51,73 @@ class _HicabsState extends State<Hicabs> {
                         children: [
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
                           Container(
                             child: Column(children: [
-                              Image.asset("assets/images/Parfum.png"),
+                              Image.asset("assets/images/aghicab.jpg"),
                               const Text("Ag hicab"),
                             ]),
                           ),
@@ -130,3 +133,19 @@ class _HicabsState extends State<Hicabs> {
     );
   }
 }
+  // PageRouteBuilder(
+  //                               transitionDuration: Duration(milliseconds: 500),
+  //                               transitionsBuilder:
+  //                                   (context, animation, animationTime, child) {
+  //                                 animation = CurvedAnimation(
+  //                                     parent: animation, curve: Curves.easeOut);
+  //                                 return ScaleTransition(
+  //                                   alignment: Alignment.center,
+  //                                   scale: animation,
+  //                                   child: child,
+  //                                 );
+  //                               },
+  //                               pageBuilder:
+  //                                   (context, animation, animationTime) {
+  //                                 return Hicabs();
+  //                               })

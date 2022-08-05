@@ -1,19 +1,18 @@
 // import 'dart:html';
-// import 'dart:html';
 // import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_from_amirali/BottomNavBar.dart';
-
+import 'package:project_from_amirali/BottomNavigationBar.dart';
+import 'package:project_from_amirali/Etirler.dart';
 import 'package:project_from_amirali/hicabs.dart';
 import 'package:project_from_amirali/sections.dart';
 
+// import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(
     const MaterialApp(home: Shop()),
   );
 }
-// import 'package:google_fonts/google_fonts.dart';
 
 class Shop extends StatefulWidget {
   const Shop({Key? key}) : super(key: key);
@@ -36,7 +35,7 @@ class _ShopState extends State<Shop> {
                 height: 300,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: Color(0xFFE31E24)),
+                    color: const Color(0xFFE31E24)),
                 child: Padding(
                   padding: const EdgeInsets.all(15),
                   child: Column(
@@ -160,110 +159,209 @@ class _ShopState extends State<Shop> {
                   children: [
                     Mehsullar(
                       text: "Hicab",
-                      image: 'assets/images/CirclesFour.png',
+                      image: 'assets/images/hicab.png',
                       onTap: () {
-                        setState(() {
-                          Navigator.of(context).push(PageRouteBuilder(
-                              transitionDuration: Duration(milliseconds: 500),
-                              transitionsBuilder:
-                                  (context, animation, animationTime, child) {
-                                animation = CurvedAnimation(
-                                    parent: animation, curve: Curves.easeOut);
-                                return ScaleTransition(
-                                  alignment: Alignment.center,
-                                  scale: animation,
-                                  child: child,
-                                );
-                              },
-                              pageBuilder: (context, animation, animationTime) {
-                                return Hicabs();
-                              }));
-                        });
+                        Navigator.of(context).push(PageRouteBuilder(
+                            transitionDuration:
+                                const Duration(milliseconds: 500),
+                            transitionsBuilder:
+                                (context, animation, animationTime, child) {
+                              animation = CurvedAnimation(
+                                  parent: animation, curve: Curves.easeOut);
+                              return ScaleTransition(
+                                alignment: Alignment.center,
+                                scale: animation,
+                                child: child,
+                              );
+                            },
+                            pageBuilder: (context, animation, animationTime) {
+                              return const Hicabs();
+                            }));
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Mehsullar(
                       text: ("Etirler"),
-                      image: 'assets/images/CirclesFour.png',
+                      image: 'assets/images/hicab.png',
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                            transitionDuration: Duration(milliseconds: 500),
+                            transitionsBuilder:
+                                (context, animation, animationTime, child) {
+                              animation = CurvedAnimation(
+                                  parent: animation, curve: Curves.easeOut);
+                              return ScaleTransition(
+                                alignment: Alignment.center,
+                                scale: animation,
+                                child: child,
+                              );
+                            },
+                            pageBuilder: (context, animation, animationTime) {
+                              return Etir();
+                            }));
+                      },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    Mehsullar(
+                    const Mehsullar(
                         text: ("Dini Kitablar"),
-                        image: 'assets/images/CirclesFour.png'),
-                    SizedBox(
+                        image: 'assets/images/hicab.png'),
+                    const SizedBox(
                       width: 20,
                     ),
-                    Mehsullar(
-                        text: ("Diger"),
-                        image: "assets/images/CirclesFour.png"),
+                    const Mehsullar(
+                        text: ("Diger"), image: "assets/images/hicab.png"),
                   ],
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Mehsullar(
                     text: "Hicab",
-                    image: 'assets/images/CirclesFour.png',
+                    image: 'assets/images/hicab.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                     text: ("Etirler"),
-                    image: 'assets/images/CirclesFour.png',
+                    image: 'assets/images/hicab.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                       text: ("Dini Kitablar"),
-                      image: 'assets/images/CirclesFour.png'),
+                      image: 'assets/images/hicab.png'),
                   SizedBox(
                     width: 20,
                   ),
-                  Mehsullar(
-                      text: ("Diger"), image: "assets/images/CirclesFour.png"),
+                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
                 ],
               ),
               const SizedBox(
                 height: 10,
               ),
               Row(
-                children: [
+                children: const [
                   Mehsullar(
                     text: "Hicab",
-                    image: 'assets/images/CirclesFour.png',
+                    image: 'assets/images/hicab.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                     text: ("Etirler"),
-                    image: 'assets/images/CirclesFour.png',
+                    image: 'assets/images/hicab.png',
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   Mehsullar(
                       text: ("Dini Kitablar"),
-                      image: 'assets/images/CirclesFour.png'),
+                      image: 'assets/images/hicab.png'),
                   SizedBox(
                     width: 20,
                   ),
-                  Mehsullar(
-                      text: ("Diger"), image: "assets/images/CirclesFour.png"),
+                  Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
                 ],
               ),
             ],
           ),
         ),
-        SizedBox(height: 14.8),
+        const SizedBox(height: 14.8),
       ]),
       bottomNavigationBar: BottomNavBar(),
+    );
+  }
+}
+
+class Written extends StatefulWidget {
+  const Written({Key? key}) : super(key: key);
+
+  @override
+  State<Written> createState() => _WrittenState();
+}
+
+class _WrittenState extends State<Written> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 700,
+          child: const Text("Mehsullar",
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25)),
+        ),
+        Row(
+          children: [
+            Mehsullar(
+              text: "Hicab",
+              image: 'assets/images/hicab.png',
+              onTap: () {
+                setState(() {
+                  Navigator.of(context).push(PageRouteBuilder(
+                      transitionDuration: const Duration(milliseconds: 500),
+                      transitionsBuilder:
+                          (context, animation, animationTime, child) {
+                        animation = CurvedAnimation(
+                            parent: animation, curve: Curves.easeOut);
+                        return ScaleTransition(
+                          alignment: Alignment.center,
+                          scale: animation,
+                          child: child,
+                        );
+                      },
+                      pageBuilder: (context, animation, animationTime) {
+                        return const Hicabs();
+                      }));
+                });
+              },
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Mehsullar(
+              text: ("Etirler"),
+              image: 'assets/images/hicab.png',
+              onTap: () {
+                setState(() {
+                  Navigator.of(context).push(PageRouteBuilder(
+                      transitionDuration: const Duration(milliseconds: 500),
+                      transitionsBuilder:
+                          (context, animation, animationTime, child) {
+                        animation = CurvedAnimation(
+                            parent: animation, curve: Curves.easeOut);
+                        return ScaleTransition(
+                          alignment: Alignment.center,
+                          scale: animation,
+                          child: child,
+                        );
+                      },
+                      pageBuilder: (context, animation, animationTime) {
+                        return const Etir();
+                      }));
+                });
+              },
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Mehsullar(
+                text: ("Dini Kitablar"), image: 'assets/images/hicab.png'),
+            SizedBox(
+              width: 20,
+            ),
+            Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+          ],
+        )
+      ],
     );
   }
 }

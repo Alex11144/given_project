@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class bottomAppBar extends StatelessWidget {
   final String text;
-  final String image;
+  final IconData icon;
   final void Function()? onTap;
+  final Color color;
   const bottomAppBar(
-      {Key? key, required this.text, required this.image, this.onTap})
+      {Key? key,
+      required this.text,
+      required this.icon,
+      this.onTap,
+      required this.color})
       : super(key: key);
 
   @override
@@ -16,12 +19,17 @@ class bottomAppBar extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(image),
+          Icon(
+            icon,
+            color: color,
+          ),
           Text(
             text,
-            style: TextStyle(color: Colors.white),
-          )
+            style: const TextStyle(color: Colors.white),
+          ),
         ],
       ),
     );

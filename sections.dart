@@ -21,7 +21,7 @@ class Mehsullar extends StatelessWidget {
           width: 128,
           height: 80,
           decoration: BoxDecoration(
-              color: Color.fromARGB(36, 255, 255, 255),
+              color: const Color.fromARGB(36, 255, 255, 255),
               borderRadius: BorderRadius.circular(16)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,7 +29,7 @@ class Mehsullar extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.black),
               ),
               Image.asset(image),
             ],
