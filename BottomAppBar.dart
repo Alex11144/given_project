@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/cupertino/tab_scaffold.dart';
 import 'package:project_from_amirali/BottomAppBar.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
-import 'package:project_from_amirali/bottomAppBarIcons.dart';
 
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';

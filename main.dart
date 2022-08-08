@@ -128,7 +128,7 @@ class _ShopState extends State<Shop> {
                               );
                             },
                             pageBuilder: (context, animation, animationTime) {
-                              return const Hicabs();
+                              return HicabsName();
                             }));
                       },
                     ),
@@ -272,7 +272,7 @@ class _WrittenState extends State<Written> {
                         );
                       },
                       pageBuilder: (context, animation, animationTime) {
-                        return const Hicabs();
+                        return HicabsName();
                       }));
                 });
               },
@@ -298,7 +298,7 @@ class _WrittenState extends State<Written> {
                         );
                       },
                       pageBuilder: (context, animation, animationTime) {
-                        return const Etir();
+                        return Etir();
                       }));
                 });
               },
