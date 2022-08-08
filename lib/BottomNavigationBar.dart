@@ -41,16 +41,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Axtaris',
               icon: Icons.search_outlined,
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Hicabs()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HicabsName()));
               },
               color: Colors.white),
           bottomAppBar(
               text: 'Mehsullar',
               icon: Icons.shopping_bag_outlined,
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Hicabs()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HicabsName()));
               },
               color: Colors.white),
           bottomAppBar(
@@ -65,8 +65,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Ayarlar',
               icon: Icons.settings_outlined,
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Hicabs()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HicabsName()));
               },
               color: Colors.white),
         ],

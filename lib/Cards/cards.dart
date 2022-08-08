@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:project_from_amirali/screens/hicabs.dart';
 
 class Cards extends StatelessWidget {
-  final String image;
-  final String text;
-  final void Function()? onTap;
-  const Cards({Key? key, required this.image, required this.text, this.onTap})
-      : super(key: key);
+  final HicabData data;
+  const Cards({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 130, bottom: 130),
+      margin: EdgeInsets.only(right: 130, bottom: 90),
       // constraints: BoxConstraints(maxWidth: 200),
       // width: 200,
       // height: 200,
       child: InkWell(
-        onTap: onTap,
+        onTap: data.onTap,
         child: Column(
             // mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(image),
-              Text(text),
+              Image.asset(data.image),
+              Text(data.text),
             ]),
       ),
     );
