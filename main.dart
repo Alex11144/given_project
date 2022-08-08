@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
-import 'package:project_from_amirali/Etirler.dart';
-import 'package:project_from_amirali/hicabs.dart';
+import 'package:project_from_amirali/Cards/Containers_sections.dart';
+
+import 'package:project_from_amirali/screens/Etirler.dart';
+import 'package:project_from_amirali/screens/hicabs.dart';
 import 'package:project_from_amirali/sections.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
@@ -65,71 +67,22 @@ class _ShopState extends State<Shop> {
                         // crossAxisAlignment: CrossAxisAlignment.center,
                         verticalDirection: VerticalDirection.down,
                         children: [
-                          Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7.0),
-                                  color: const Color.fromRGBO(
-                                      255, 255, 255, 0.541),
-                                ),
-                                child: Column(
-                                  children: const [
-                                    Text("Fecr"),
-                                    Text("-----"),
-                                  ],
-                                )),
-                          ),
+                          sections(text1: 'Fecr', text2: '----'),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7.0),
-                                  color: Colors.white54,
-                                ),
-                                child: Column(
-                                  children: const [
-                                    Text("Gun cixir"),
-                                    Text("04:52"),
-                                  ],
-                                )),
-                          ),
+                          sections(text1: 'Gun cixir', text2: "04:52"),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7.0),
-                                  color: Colors.white54,
-                                ),
-                                child: Column(
-                                  children: const [
-                                    Text("Zohr"),
-                                    Text("04:52"),
-                                  ],
-                                )),
-                          ),
+                          sections(text1: "Zohr", text2: '04:52'),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7.0),
-                                  color: Colors.white54,
-                                ),
-                                child: Column(
-                                  children: const [
-                                    Text("Esr"),
-                                    Text("04:52"),
-                                  ],
-                                )),
-                          ),
+                          sections(text1: 'Esr', text2: "04:52"),
                         ],
                       )
                     ],

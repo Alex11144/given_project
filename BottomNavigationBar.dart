@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_from_amirali/Etirler.dart';
-import 'package:project_from_amirali/bottomAppBarIcons.dart';
-import 'package:project_from_amirali/hicabs.dart';
+import 'package:project_from_amirali/screens/Etirler.dart';
+import 'package:project_from_amirali/Cards/bottomAppBarIcons.dart';
 import 'package:project_from_amirali/main.dart';
+import 'package:project_from_amirali/screens/hicabs.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
+import 'package:project_from_amirali/Cards/cards.dart';
 import 'package:project_from_amirali/main.dart';
 
 // import 'package:flutter/src/foundation/key.dart';
@@ -41,86 +42,47 @@ class _EtirState extends State<Etir> {
                     ),
                     Expanded(
                       child: GridView.count(
-                        // mainAxisSpacing: 0,
-                        // crossAxisSpacing: 0,
-                        // childAspectRatio: 1.5,
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         controller: ScrollController(keepScrollOffset: false),
                         crossAxisCount: 2,
                         children: [
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
-                          Container(
-                            child: Column(children: [
-                              Image.asset("assets/images/aghicab.jpg"),
-                              const Text("Ag hicab"),
-                            ]),
-                          ),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
+                          Cards(
+                              image: "assets/images/aghicab.jpg",
+                              text: 'parfum'),
                         ],
                       ),
                     ),
@@ -133,19 +95,3 @@ class _EtirState extends State<Etir> {
     );
   }
 }
-  // PageRouteBuilder(
-  //                               transitionDuration: Duration(milliseconds: 500),
-  //                               transitionsBuilder:
-  //                                   (context, animation, animationTime, child) {
-  //                                 animation = CurvedAnimation(
-  //                                     parent: animation, curve: Curves.easeOut);
-  //                                 return ScaleTransition(
-  //                                   alignment: Alignment.center,
-  //                                   scale: animation,
-  //                                   child: child,
-  //                                 );
-  //                               },
-  //                               pageBuilder:
-  //                                   (context, animation, animationTime) {
-  //                                 return Hicabs();
-  //                               })
