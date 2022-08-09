@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_from_amirali/screens/Etirler.dart';
 import 'package:project_from_amirali/Cards/bottomAppBarIcons.dart';
 import 'package:project_from_amirali/main.dart';
+import 'package:project_from_amirali/screens/HicabMehsullari.dart';
 import 'package:project_from_amirali/screens/hicabs.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -19,9 +20,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.red,
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
@@ -33,8 +34,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Bas sehife',
               icon: Icons.home_outlined,
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Shop()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Shop()));
               },
               color: Colors.white),
           bottomAppBar(
@@ -57,8 +58,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Secilmisler',
               icon: Icons.favorite_outline,
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Shop()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Shop()));
               },
               color: Colors.white),
           bottomAppBar(

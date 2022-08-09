@@ -1,43 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
 import 'package:project_from_amirali/Cards/cards.dart';
+import 'package:project_from_amirali/details/Details.dart';
 import 'package:project_from_amirali/main.dart';
-import 'package:project_from_amirali/screens/DetailsScreen.dart';
-
-class HicabsName extends StatelessWidget {
-  List<HicabData> Data1 = [
-    HicabData('assets/images/blackHicab.png', 'black hicab', () {}),
-    HicabData('assets/images/whiteHicab.png', 'white hicab', () {}),
-    HicabData('assets/images/blackHicab.png', 'black hicab', () {}),
-    HicabData('assets/images/whiteHicab.png', 'white hicab', () {}),
-    HicabData('assets/images/blackHicab.png', 'black hicab', () {}),
-    HicabData('assets/images/whiteHicab.png', 'white hicab', () {}),
-    HicabData('assets/images/blackHicab.png', 'black hicab', () {}),
-    HicabData('assets/images/whiteHicab.png', 'white hicab', () {}),
-  ];
-
-  HicabsName({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Hicabs(
-      Data1: Data1,
-    );
-  }
-}
+import 'package:project_from_amirali/details/DetailsScreen.dart';
+import 'package:project_from_amirali/screens/HicabMehsullari.dart';
 
 class HicabData {
   final String image;
   final String text;
-  final void Function() onTap;
-  HicabData(this.image, this.text, this.onTap);
+
+  HicabData(this.image, this.text);
 }
 
 class Hicabs extends StatelessWidget {
   final List<HicabData> Data1;
+  final String header;
   Hicabs({
     Key? key,
     required this.Data1,
+    required this.header,
   }) : super(key: key);
 
   @override
@@ -48,8 +30,8 @@ class Hicabs extends StatelessWidget {
           width: 1000,
           padding: const EdgeInsets.fromLTRB(150, 50, 150, 50),
           child: Column(children: [
-            Written(),
-            SizedBox(
+            const Written(),
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -57,12 +39,10 @@ class Hicabs extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Hicablar",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
-                    ),
-                    SizedBox(
+                    Text(header,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 20)),
+                    const SizedBox(
                       height: 20,
                     ),
                     Expanded(
@@ -75,8 +55,33 @@ class Hicabs extends StatelessWidget {
                               controller:
                                   ScrollController(keepScrollOffset: false),
                               crossAxisCount: 2,
-                              children: Data1.map((data) => Cards(data: data))
-                                  .toList()),
+                              children: Data1.map((data) => Cards(
+                                    data: data,
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          PageRouteBuilder(
+                                              transitionDuration:
+                                                  const Duration(
+                                                      milliseconds: 500),
+                                              transitionsBuilder: (context,
+                                                  animation,
+                                                  animationTime,
+                                                  child) {
+                                                animation = CurvedAnimation(
+                                                    parent: animation,
+                                                    curve: Curves.easeOut);
+                                                return ScaleTransition(
+                                                  alignment: Alignment.center,
+                                                  scale: animation,
+                                                  child: child,
+                                                );
+                                              },
+                                              pageBuilder: (context, animation,
+                                                  animationTime) {
+                                                return DetailsScreen();
+                                              }));
+                                    },
+                                  )).toList()),
                         ),
                       ),
                     ),
@@ -85,66 +90,7 @@ class Hicabs extends StatelessWidget {
           ]),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
-
-
-  //  Cards(
-  //                                 onTap: () {
-  //                                   Navigator.of(context).push(PageRouteBuilder(
-  //                                       transitionDuration:
-  //                                           const Duration(milliseconds: 500),
-  //                                       transitionsBuilder: (context, animation,
-  //                                           animationTime, child) {
-  //                                         animation = CurvedAnimation(
-  //                                             parent: animation,
-  //                                             curve: Curves.easeOut);
-  //                                         return ScaleTransition(
-  //                                           alignment: Alignment.center,
-  //                                           scale: animation,
-  //                                           child: child,
-  //                                         );
-  //                                       },
-  //                                       pageBuilder: (context, animation,
-  //                                           animationTime) {
-  //                                         return const DetailsScreen();
-  //                                       }));
-  //                                 },
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 onTap: () {},
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),
-  //                             Cards(
-  //                                 image: "assets/images/Parfum.png",
-  //                                 text: "Ag hicab"),

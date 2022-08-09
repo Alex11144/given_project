@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project_from_amirali/details/DetailsScreen.dart';
 import 'package:project_from_amirali/screens/hicabs.dart';
 
 class Cards extends StatelessWidget {
   final HicabData data;
-  const Cards({Key? key, required this.data}) : super(key: key);
+  final void Function()? onTap;
+  const Cards({Key? key, required this.data, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class Cards extends StatelessWidget {
       // width: 200,
       // height: 200,
       child: InkWell(
-        onTap: data.onTap,
+        onTap: onTap,
         child: Column(
             // mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,

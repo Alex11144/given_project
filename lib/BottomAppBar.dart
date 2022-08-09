@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/cupertino/tab_scaffold.dart';
-import 'package:project_from_amirali/BottomAppBar.dart';
-import 'package:project_from_amirali/BottomNavigationBar.dart';
 
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';
@@ -37,57 +34,57 @@ class _BarState extends State<Bar> {
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),
               Container(
-                child: Column(children: [
+                child: Column(children: const [
                   Text("Ag hicab"),
                 ]),
               ),

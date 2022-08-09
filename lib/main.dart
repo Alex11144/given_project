@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_from_amirali/BottomNavigationBar.dart';
 import 'package:project_from_amirali/Cards/Containers_sections.dart';
+import 'package:project_from_amirali/Cards/mehsullar.dart';
 
 import 'package:project_from_amirali/screens/Etirler.dart';
-import 'package:project_from_amirali/screens/hicabs.dart';
-import 'package:project_from_amirali/sections.dart';
+import 'package:project_from_amirali/screens/HicabMehsullari.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 void main() {
@@ -67,22 +67,22 @@ class _ShopState extends State<Shop> {
                         // crossAxisAlignment: CrossAxisAlignment.center,
                         verticalDirection: VerticalDirection.down,
                         children: [
-                          sections(text1: 'Fecr', text2: '----'),
+                          const sections(text1: 'Fecr', text2: '----'),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          sections(text1: 'Gun cixir', text2: "04:52"),
+                          const sections(text1: 'Gun cixir', text2: "04:52"),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          sections(text1: "Zohr", text2: '04:52'),
+                          const sections(text1: "Zohr", text2: '04:52'),
                           const SizedBox(
                             height: 30,
                             width: 6,
                           ),
-                          sections(text1: 'Esr', text2: "04:52"),
+                          const sections(text1: 'Esr', text2: "04:52"),
                         ],
                       )
                     ],
@@ -140,7 +140,8 @@ class _ShopState extends State<Shop> {
                       image: 'assets/images/hicab.png',
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            transitionDuration: Duration(milliseconds: 500),
+                            transitionDuration:
+                                const Duration(milliseconds: 500),
                             transitionsBuilder:
                                 (context, animation, animationTime, child) {
                               animation = CurvedAnimation(
@@ -228,7 +229,7 @@ class _ShopState extends State<Shop> {
         ),
         const SizedBox(height: 14.8),
       ]),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
@@ -303,15 +304,15 @@ class _WrittenState extends State<Written> {
                 });
               },
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
-            Mehsullar(
+            const Mehsullar(
                 text: ("Dini Kitablar"), image: 'assets/images/hicab.png'),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
-            Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
+            const Mehsullar(text: ("Diger"), image: "assets/images/hicab.png"),
           ],
         )
       ],
