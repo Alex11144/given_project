@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:project_from_amirali/details/DetailsScreen.dart';
 import 'package:project_from_amirali/screens/Etirler.dart';
 import 'package:project_from_amirali/Cards/bottomAppBarIcons.dart';
 import 'package:project_from_amirali/main.dart';
@@ -42,8 +44,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Axtaris',
               icon: Icons.search_outlined,
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HicabsName()));
+                showSearch(context: context, delegate: MySearchDelegate());
               },
               color: Colors.white),
           bottomAppBar(
@@ -73,5 +74,94 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ],
       ),
     );
+  }
+}
+
+class MySearchDelegate extends SearchDelegate {
+  List<String> products = [
+    'white hicab',
+    'black hicab',
+    'mehsullar',
+    'hicabs',
+    'etirler'
+  ];
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      tooltip: 'Back',
+      icon: AnimatedIcon(
+        icon: AnimatedIcons.menu_arrow,
+        progress: transitionAnimation,
+      ),
+      onPressed: () {
+        // SearchDelegate.close() can return vlaues, similar to Navigator.pop().
+        this.close(context, '');
+      },
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List<String> mehsullar = products.where((element) {
+      final result = element.toLowerCase();
+      final input = query.toLowerCase();
+      return result.contains(input);
+    }).toList();
+
+    return ListView.builder(
+        itemCount: mehsullar.length,
+        itemBuilder: (context, index) {
+          final suggestion = mehsullar[index];
+          return ListTile(
+            title: Text(suggestion),
+            onTap: () {
+              query = suggestion;
+              showResults(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: ((context) => ProductDetailsView())));
+            },
+          );
+        });
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    return ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context, index) {
+          final suggestion = products[index];
+          return ListTile(
+            title: Text(suggestion),
+            onTap: () {
+              query = suggestion;
+              showResults(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: ((context) => ProductDetailsView())));
+            },
+          );
+        });
+  }
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return <Widget>[
+      if (query.isEmpty)
+        IconButton(
+          tooltip: 'Voice Search',
+          icon: const Icon(Icons.mic),
+          onPressed: () {
+            query = 'TODO: implement voice input';
+          },
+        )
+      else
+        IconButton(
+          tooltip: 'Clear',
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            query = '';
+            showSuggestions(context);
+          },
+        )
+    ];
   }
 }
